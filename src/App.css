@@ -1,0 +1,101 @@
+*{
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+
+}
+
+
+
+.navbar{
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.navbar h1{
+  color: #f1356d;
+  cursor: pointer;
+}
+
+.navbar .links{
+  margin-left: auto;
+
+}
+
+.navbar .links a{
+  text-decoration: none;
+  margin-left: 16px;
+  font-weight: 700;
+  color: #665f61;
+}
+
+.content{
+  display: flex;
+  width: 600px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+
+.simple-form{
+  display: grid;
+  place-items: center;
+  margin-top: 40px;
+  background-color: grey;
+  width: 300px;
+  padding: 24px;
+}
+
+
+form{
+  display: flex;
+  flex-direction: column;
+
+}
+
+form label{
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+form input{
+  width: 260px;
+  height: 35px;
+  margin-bottom: 28px;
+  outline: none;
+  padding-left: 4px;
+}
+
+
+button{
+  background-color: blue;
+  color: white;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+}
+
+table{
+  width: 600px;
+  border-collapse: collapse;
+  text-transform: capitalize;
+
+}
+
+td, th{
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+
+}
+
+
+tr:nth-child(even){
+  background-color: #dddddd;
+  
+}
