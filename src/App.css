@@ -19,6 +19,7 @@
 .navbar h1{
   color: #f1356d;
   cursor: pointer;
+  text-transform: uppercase;
 }
 
 .navbar .links{
@@ -31,6 +32,7 @@
   margin-left: 16px;
   font-weight: 700;
   color: #665f61;
+  text-transform: uppercase;
 }
 
 .content{
@@ -45,9 +47,9 @@
 .simple-form{
   display: grid;
   place-items: center;
-  margin-top: 40px;
   background-color: grey;
   width: 300px;
+  margin: 80px auto;
   padding: 24px;
 }
 
@@ -83,7 +85,7 @@ button{
 table{
   width: 600px;
   border-collapse: collapse;
-  text-transform: capitalize;
+  
 
 }
 

@@ -6,6 +6,48 @@
       "email": "testmails@gmail.com",
       "password": "11234567",
       "id": 1
+    },
+    {
+      "firstName": "rashid",
+      "lastName": "ofori",
+      "email": "testingmail@gmail.com",
+      "password": "123456789",
+      "id": 2
+    },
+    {
+      "firstName": "naytan",
+      "lastName": "kwao",
+      "email": "testmails200@gmail.com",
+      "password": "23456789",
+      "id": 3
+    },
+    {
+      "firstName": "rashid",
+      "lastName": "ofori",
+      "email": "anythinganything@gmail.com",
+      "password": "234567892733646545",
+      "id": 4
+    },
+    {
+      "firstName": "rashid",
+      "lastName": "ofori",
+      "email": "ghdhgdfbgbhbcfbbgv@gmail.com",
+      "password": "ffggfgdssssssssss",
+      "id": 5
+    },
+    {
+      "firstName": "rashid",
+      "lastName": "ofori",
+      "email": "micheal@gmail.com",
+      "password": "naytanorleans",
+      "id": 6
+    },
+    {
+      "firstName": "rashid",
+      "lastName": "ofori",
+      "email": "rashidofori11@gmail.com",
+      "password": "wayolllllllllllllllll",
+      "id": 7
     }
   ]
 }

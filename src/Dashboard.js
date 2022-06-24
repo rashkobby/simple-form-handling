@@ -3,7 +3,7 @@ import useFetch from './useFetch';
 
 
 const Dashboard = () => {
-    const {data: userInfo, isLoading, error} = useFetch('http://localhost:9000/person')
+    const {data: userInfo, isLoading, error} = useFetch('https://nordc.herokuapp.com/details')
 
  
     return ( 
@@ -14,18 +14,23 @@ const Dashboard = () => {
                     <tr>
                         <th>Firstname</th>
                         <th>Lastname</th>
-                        <th>Email </th>
-                        <th>Password</th>
+                        <th>Email</th>
+                        <th>Date of birth</th>
+                        <th>SSN</th>
+                        <th>MaidenName</th>
+                        
                     </tr>
                     {error && <tr>{error}</tr>}
                     {isLoading && <tr>loading...</tr>}
                     
                     {userInfo.map((user) => ( 
                         <tr key={user.id}>
-                            <td>{user.firstName}</td>
-                            <td>{user.lastName}</td>
-                            <td>{user.email}</td>
-                            <td>{user.password}</td>
+                            <td>{user.firstname}</td>
+                            <td>{user.lastname}</td>
+                            <td>{user.useremail}</td>
+                            <td>{user.userDOB}</td>
+                            <td>{user.userSSN}</td>
+                            <td>{user.maidenName}</td>
                         </tr>
                     ))}
                 </tbody>

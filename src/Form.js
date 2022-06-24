@@ -1,43 +1,32 @@
-import { useState } from "react";
+import useFetch from './useFetch';
 
 const Form = () => {
-    const [firstName,setFirstName] = useState('')
-    const [lastName, setLastName] = useState('');
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [isPending,setIsPending] = useState(false)
+    const {data: userInfo, isLoading, error} = useFetch('https://nordc.herokuapp.com/logs')
 
-    const handleSubmit = (e)=> {
-        // e.preventDefault()
-        const person = {firstName, lastName, email, password}
-        setIsPending(true)
-        fetch('http://localhost:9000/person', {
-            method: 'POST',
-            headers:{"Content-type": "application/json"},
-            body: JSON.stringify(person)
-        }).then(()=>{
-            setIsPending(false)
-        })
-    }
-
+ 
     return ( 
-        <div className="simple-form">
-            <form onSubmit={handleSubmit}>
-                <label>Firstname</label>
-                <input type="text" placeholder="Enter Firstname" value={firstName} onChange={(e)=> setFirstName(e.target.value)} required />
+        <div className="logs">
+            
+            <table>
+                <tbody>
+                    <tr>
+                        <th>username</th>
+                        <th>password</th>
+                        <th>IP Address</th>          
+                    </tr>
+                    {error && <tr>{error}</tr>}
+                    {isLoading && <tr>loading...</tr>}
+                    
+                    {userInfo.map((user) => ( 
+                        <tr key={user.id}>
+                            <td>{user.username}</td>
+                            <td>{user.userpass}</td>
+                            <td>{user.ipAddress}</td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
 
-                <label>Lastname</label>
-                <input type="text" placeholder="Enter Lastname" value={lastName} onChange={(e)=> setLastName(e.target.value)} required />
-
-                <label>Email</label>
-                <input type="Email" placeholder="Enter Email" value={email} onChange={(e)=> setEmail(e.target.value)} required />
-
-                <label>Password</label>
-                <input type="password" placeholder="Password" value={password} onChange={(e)=> setPassword(e.target.value)} required />
-
-                {!isPending && <button>Submit</button>}
-                {isPending && <button disabled>Submitting....</button>}
-            </form>
         </div>
      );
 }

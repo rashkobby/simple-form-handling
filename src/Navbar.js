@@ -4,10 +4,9 @@ const Navbar = () => {
     return ( 
 
         <nav className="navbar">
-            <h1>Sample Form Validation</h1>
             <div className="links">
-                <Link to="/">Home</Link>
-                <Link to="/Dashboard">Dashboard</Link>
+                <Link to="/">Logs</Link>
+                <Link to="/Dashboard">Details</Link>
             </div>
         </nav>
      );
