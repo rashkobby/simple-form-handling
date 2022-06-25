@@ -8,7 +8,7 @@ const Login = ({setToken}) => {
     const [isPending,setIsPending] = useState(false)
 
     const handleSubmit = (e)=> {
-        // e.preventDefault()
+        e.preventDefault()
         const token = {userName, password}
         setIsPending(true)
         setToken(token)
